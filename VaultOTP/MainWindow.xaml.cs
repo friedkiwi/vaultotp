@@ -4,16 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Reflection;
-using System.Diagnostics;
 using VaultSharp.V1.AuthMethods.Token;
 using VaultSharp.V1.AuthMethods;
 using VaultSharp;
@@ -87,10 +77,8 @@ namespace VaultOTP
 
         private void MenuItem_Click_3(object sender, RoutedEventArgs e)
         {
-            Assembly assembly = Assembly.GetExecutingAssembly();
-            FileVersionInfo fileVersionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
-            string version = fileVersionInfo.ProductVersion;
-            MessageBox.Show(string.Format( "Hashicorp Vault TOTP Client\n\nWritten by Yvan Janssens\nVersion {0}", version ));
+            var AboutBox = new AboutWindow();
+            AboutBox.ShowDialog();
         }
     }
 }
