@@ -1,0 +1,44 @@
+﻿<Window x:Class="VaultOTP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VaultOTP"
+        mc:Ignorable="d"
+        Title="Vault TOTP Client" Height="450" Width="400" Loaded="Window_Loaded">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <Menu.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <DockPanel HorizontalAlignment="Stretch"/>
+                </ItemsPanelTemplate>
+            </Menu.ItemsPanel>
+            <MenuItem Header="_File">
+                <MenuItem Header="Preferences..." Click="MenuItem_Click_1" />
+                <Separator />
+                <MenuItem Header="_Exit" Click="MenuItem_Click" />
+            </MenuItem>
+            <MenuItem Header="_Edit">
+                <MenuItem Header="Add TOTP secret ..." Click="MenuItem_Click_2" />
+            </MenuItem>
+            <MenuItem Header="_Help" HorizontalAlignment="Right">
+                <MenuItem Header="About ..." Click="MenuItem_Click_3" />
+            </MenuItem>
+        </Menu>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="25" />
+            </Grid.RowDefinitions>
+            <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto">
+                <StackPanel Grid.Row="0" Name="OtpViewPanel" Orientation="Vertical">
+                
+                </StackPanel>
+            </ScrollViewer>
+            <StatusBar Grid.Row="1">
+                <StatusBarItem Name="VaultURL" />
+            </StatusBar>
+        </Grid>
+    </DockPanel>
+</Window>
