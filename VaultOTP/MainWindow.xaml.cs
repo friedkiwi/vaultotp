@@ -44,6 +44,8 @@ namespace VaultOTP
 
         async Task UpdateContent()
         {
+            OtpViewPanel.Children.Clear();
+
             IAuthMethodInfo authMethod = new TokenAuthMethodInfo(Properties.Settings.Default.VaultToken);
             var vaultClientSettings = new VaultClientSettings(Properties.Settings.Default.VaultURL, authMethod);
 

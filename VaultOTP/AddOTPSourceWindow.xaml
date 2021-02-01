@@ -20,13 +20,13 @@
             <ColumnDefinition Width="110" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <Label Content="Vendor" Grid.Row="0" Grid.Column="0" Margin="5,5,5,5" />
-        <Label Content="Product" Grid.Row="1" Grid.Column="0" Margin="5,5,5,5" />
+        <Label Content="Application" Grid.Row="0" Grid.Column="0" Margin="5,5,5,5" />
+        <Label Content="Account" Grid.Row="1" Grid.Column="0" Margin="5,5,5,5" />
         <Label Content="Secret" Grid.Row="2" Grid.Column="0" Margin="5,5,5,5" />
         <TextBox Name="VendorBox" Grid.Row="0" Grid.Column="1" Margin="5,5,5,5"/>
         <TextBox Name="ProductBox" Grid.Row="1" Grid.Column="1" Margin="5,5,5,5"/>
         <TextBox Name="SecretBox" Grid.Row="2" Grid.Column="1" Margin="5,5,5,5"/>
-        <Button Content="Add" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Right" Width="100" Margin="5,5,5,5" Click="Button_Click_1" />
-        <Button Content="Cancel" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Right" Width="100" Margin="5,5,110,5" Click="Button_Click" />
+        <Button Name="AddKeyButton" Content="Add" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Right" Width="100" Margin="5,5,5,5" Click="Button_Click_1" />
+        <Button Name="CancelAddButton" Content="Cancel" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Right" Width="100" Margin="5,5,110,5" Click="Button_Click" />
     </Grid>
 </Window>

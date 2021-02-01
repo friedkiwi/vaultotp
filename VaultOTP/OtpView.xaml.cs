@@ -36,7 +36,7 @@ namespace VaultOTP
             timer = new DispatcherTimer();
             timer.Tick += Timer_Tick;
             var refreshTask = GetTokenData();
-            
+            timer.Interval = TimeSpan.FromSeconds(1);
             
         }
 
@@ -61,7 +61,6 @@ namespace VaultOTP
             OTPValue.Text = totpSecret.Data.Code;
             if (!timer.IsEnabled)
             {
-                timer.Interval = TimeSpan.FromSeconds(Convert.ToInt32(key.Data.Period));
                 timer.Start();
             }
 
