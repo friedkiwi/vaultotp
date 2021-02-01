@@ -72,7 +72,11 @@ namespace VaultOTP
 
         private void MenuItem_Click_2(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Add secret stub");
+            var addWindow = new AddOTPSourceWindow();
+            if (addWindow.ShowDialog() == true)
+            {
+                var refreshTask = UpdateContent();
+            }
         }
 
         private void MenuItem_Click_3(object sender, RoutedEventArgs e)
